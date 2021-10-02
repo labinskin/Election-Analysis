@@ -93,9 +93,3 @@ with open(file_to_save, "w") as txt_file:
     #print(winning_candidate_summary)
     #Save the winning candidate's name to the text file.
     txt_file.write(winning_candidate_summary)
-
-#The data we need to retrieve.
-# 1. The total number of votes cast.
-# 2. A complete list of candidate who received votes.
-# 3. The percentage of votes each candidate won.
-# 4. The total number of votes each candidate won
