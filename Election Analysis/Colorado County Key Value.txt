@@ -1,0 +1,206 @@
+Microsoft Windows [Version 10.0.19043.1237]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Owner>python
+Python 3.7.6 (tags/v3.7.6:43364a7ae0, Dec 19 2019, 00:42:30) [MSC v.1916 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> Type(3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'Type' is not defined
+>>> type(3)
+<class 'int'>
+>>> type(ballots)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'ballots' is not defined
+>>> type(ballots)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'ballots' is not defined
+>>> ballots=1,341
+>>> ballots
+(1, 341)
+>>> type(ballots)
+<class 'tuple'>
+>>> type(73.81)
+<class 'float'>
+>>> "Hello World"
+'Hello World'
+>>> type("Hello World")
+<class 'str'>
+>>> type("")
+<class 'str'>
+>>> type(" ")
+<class 'str'>
+>>> type(true)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'true' is not defined
+>>> type(True)
+<class 'bool'>
+>>> 5+2*3
+11
+>>> 8//5-3
+-2
+>>> 8+22*2-4
+48
+>>> (8//5)
+1
+>>> (8//5)-3
+-2
+>>> 5+(9*3/2-4)
+14.5
+>>> 5+(9*3/(2-4))
+-8.5
+>>> countries=["Arapahoe","Denver","Jefferson"]
+>>> counties=["Arapahoe","Denver",Jefferson"]
+  File "<stdin>", line 1
+    counties=["Arapahoe","Denver",Jefferson"]
+                                            ^
+SyntaxError: EOL while scanning string literal
+>>> counties=["Arapahoe","Denver","Jefferson"]
+>>> counties
+['Arapahoe', 'Denver', 'Jefferson']
+>>> counties[0]
+'Arapahoe'
+>>> counties[1]
+'Denver'
+>>> counties(-1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'list' object is not callable
+>>> print(counties[-1])
+Jefferson
+>>> counties(-2)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'list' object is not callable
+>>> counties[-2]
+'Denver'
+>>> len(counties)
+3
+>>> counties[0,2]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: list indices must be integers or slices, not tuple
+>>> counties[0:2]
+['Arapahoe', 'Denver']
+>>> counties[1:2]
+['Denver']
+>>> counties[1:3]
+['Denver', 'Jefferson']
+>>> counties.append("El Paso")
+>>> counties
+['Arapahoe', 'Denver', 'Jefferson', 'El Paso']
+>>> counties.insert(2,"El Paso")
+>>> counties
+['Arapahoe', 'Denver', 'El Paso', 'Jefferson', 'El Paso']
+>>> counties.remove("El Paso")
+>>> counties
+['Arapahoe', 'Denver', 'Jefferson', 'El Paso']
+>>> counties.pop(3)
+'El Paso'
+>>> counties
+['Arapahoe', 'Denver', 'Jefferson']
+>>> counties[2]="El Paso"
+>>> counties
+['Arapahoe', 'Denver', 'El Paso']
+>>> counties[2]="Jefferson"
+>>> counties
+['Arapahoe', 'Denver', 'Jefferson']
+>>> counties.list(1, "El Paso")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'list' object has no attribute 'list'
+>>> counties.insert(1,"El Paso")
+>>> counties
+['Arapahoe', 'El Paso', 'Denver', 'Jefferson']
+>>> counties.remove("Arapahoe")
+>>> counties
+['El Paso', 'Denver', 'Jefferson']
+>>> counties[2]="Denver"
+>>> counties
+['El Paso', 'Denver', 'Denver']
+>>> counties[1]="Jefferson"
+>>> counties
+['El Paso', 'Jefferson', 'Denver']
+>>> counties.append("Arapahoe")
+>>> counties
+['El Paso', 'Jefferson', 'Denver', 'Arapahoe']
+>>> counties[-2]
+'Denver'
+>>> counties[1:2]
+['Jefferson']
+>>> my_dictionary={}
+>>> counties_dict={}
+>>> counties_dict["Arapahoe"]=422829
+>>> counties_dict
+{'Arapahoe': 422829}
+>>> counties_dict["Denver"]=463353
+>>> counties_dict["Jefferson"]=432438
+>>> counties_dict
+{'Arapahoe': 422829, 'Denver': 463353, 'Jefferson': 432438}
+>>> len(counties_dict)
+3
+>>> counties_dict.items()
+dict_items([('Arapahoe', 422829), ('Denver', 463353), ('Jefferson', 432438)])
+>>> counties_dict.keys()
+dict_keys(['Arapahoe', 'Denver', 'Jefferson'])
+>>> voting_data=[]
+>>> voting_data.append({"county":"Arapahoe", "registered_voters":42829})
+>>> voting_data.append({"county":"Denver", "registered_voters":463353})
+>>> voting_data.append({"county":"Jefferson", "registered_voters":432438})
+>>> voting_data
+[{'county': 'Arapahoe', 'registered_voters': 42829}, {'county': 'Denver', 'registered_voters': 463353}, {'county': 'Jefferson', 'registered_voters': 432438}]
+>>> voting_data.append({"county":"El Paso", "registered_voters":461149})
+>>> voting_data.insert(1,"El Paso")
+>>> voting_data
+[{'county': 'Arapahoe', 'registered_voters': 42829}, 'El Paso', {'county': 'Denver', 'registered_voters': 463353}, {'county': 'Jefferson', 'registered_voters': 432438}, {'county': 'El Paso', 'registered_voters': 461149}]
+>>> voting_data.remove("Arapahoe")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: list.remove(x): x not in list
+>>> voting_data.remove("Arapahoe")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: list.remove(x): x not in list
+>>> voting_data.pop(0)
+{'county': 'Arapahoe', 'registered_voters': 42829}
+>>> voting_data
+['El Paso', {'county': 'Denver', 'registered_voters': 463353}, {'county': 'Jefferson', 'registered_voters': 432438}, {'county': 'El Paso', 'registered_voters': 461149}]
+>>> voting_data[0]="El Paso"
+>>> voting_data
+['El Paso', {'county': 'Denver', 'registered_voters': 463353}, {'county': 'Jefferson', 'registered_voters': 432438}, {'county': 'El Paso', 'registered_voters': 461149}]
+>>> voting_data.pop(0)
+'El Paso'
+>>> voting_data
+[{'county': 'Denver', 'registered_voters': 463353}, {'county': 'Jefferson', 'registered_voters': 432438}, {'county': 'El Paso', 'registered_voters': 461149}]
+>>> voting_data[3]='county':'Denver','registered_voters':463353
+  File "<stdin>", line 1
+    voting_data[3]='county':'Denver','registered_voters':463353
+                           ^
+SyntaxError: invalid syntax
+>>> voting_data
+[{'county': 'Denver', 'registered_voters': 463353}, {'county': 'Jefferson', 'registered_voters': 432438}, {'county': 'El Paso', 'registered_voters': 461149}]
+>>> voting_data.insert(3, "county","Denver","registered_voters":463353)
+  File "<stdin>", line 1
+    voting_data.insert(3, "county","Denver","registered_voters":463353)
+                                                               ^
+SyntaxError: invalid syntax
+>>> voting_data.insert(3,"Denver")
+>>> voting_data
+[{'county': 'Denver', 'registered_voters': 463353}, {'county': 'Jefferson', 'registered_voters': 432438}, {'county': 'El Paso', 'registered_voters': 461149}, 'Denver']
+>>> voting_data.pop(3)
+'Denver'
+>>> voting_data.insert("county","Denver","registered_voters":463353)
+  File "<stdin>", line 1
+    voting_data.insert("county","Denver","registered_voters":463353)
+                                                            ^
+SyntaxError: invalid syntax
+>>> voting_data.insert(3, "county","Denver","registered_voters":"463353")
+  File "<stdin>", line 1
+    voting_data.insert(3, "county","Denver","registered_voters":"463353")
+                                                               ^
+SyntaxError: invalid syntax
+>>> voting_data.append
