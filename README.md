@@ -38,4 +38,15 @@ A Colorado Board of Elections employee has given you the following tasks to comp
  ![](https://github.com/labinskin/Election-Analysis/blob/main/Resources/Election%20Results%20Printed%20to%20Terminal.png)
 
 ##### Election-Audit Summary
+Election Commission, while this code was used for this congressional race, the code itself has the potential to be used for a broad range of elections, with only some slight modifications. I will primarily be discussing the code below and how some slight modifications to this code would allow it to be used on a broad basis.
 
+![](https://github.com/labinskin/Election-Analysis/blob/main/Resources/Code%20to%20modify.png)
+
+For local elections, we change the variable of counties to local precincts, as we are no longer focused on larger counties, but the specific municipalities with their many different precincts. By doing this, we can not only tally the total votes to declare a winner, as the winning candidate code remains the same, but we would be able to see how each local municipality voted. This has applicability for everything from mayoral races to local school boards. Expanding slightly, this would also be a useful modification for state elections, like state representatives and state senators, as these elections are still smaller and more localized than federal house congressional districts.
+
+Keeping the code the same, it would be useful for federal senate and presidential elections. The basis for this is the code is able to calculate county level outputs, the main grouping for these statewide contests. Statewide data at the county or congressional level would also be useful for presidential primary vote totaling.
+
+The code would need more modification for nationwide contests, say totaling the national raw vote totals for presidential elections (major modifications in variables would be needed to account for the Electoral College). However, by changing county to state and inputting state vote totals, the code would be able to give the vote totals for each presidential candidate.
+
+An interesting modification to U.S. elections proposed by some political scientists, like Lee Drutman, have proposed the idea of multimember districts to reduce the effects of gerrymandering. If U.S. elections were to be changed to have multimember districts, the code I would need to change would be to the winning candidate and winning count code (see the code below). What would need to be added would be extra variables and `if`statments that included the winning percentage. It would be difficult to state exactly how the code would look, without knowing the exact changes and specifications--whether it is rank choice voting or proportional representation voting. However, the code, with some modification, would still be able to calculate the totals, percentages, and declare winners.
+![](https://github.com/labinskin/Election-Analysis/blob/main/Resources/Code%20to%20modify%202.png)
