@@ -20,7 +20,7 @@ A Colorado Board of Elections employee has given you the following tasks to comp
 ##### Election-Audit Results
 
 - How many votes were cast in this congressional election?
-  - Total votes cast: 69,711
+  - Total votes cast: 369,711
 - Provide a breakdown of the number of votes and the percentage of total votes for each county in the precinct.
   - Jefferson: 10.5% (38,855)
   - Denver: 82.8% (306,055)
